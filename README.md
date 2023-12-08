@@ -22,7 +22,7 @@ So, the hypothesis we want to test in this project is if we can get a good accur
 
 ## Codebase
 
-We have been using Google colab to run the scripts below and the dataset, after downloaded from Kaggle, was place in Google Drive. Here are the notebooks produced during this research:
+We have been using Google colab to run the scripts below and the dataset, after downloaded from Kaggle, was placed in Google Drive. Here are the notebooks produced during this research:
 
 * **[01_select_data.ipynb](01_select_data.ipynb)**: this notebook contains the initial data exploration, along with the splitting of the set in two subsets:
 
