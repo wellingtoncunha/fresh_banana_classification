@@ -9,3 +9,4 @@ cff-version: 1.2.0
 message: If you use this software, please cite it using these metadata.
 title: Fresh Banana Classification
 date-released: "2023-12-07"
+repository-code: "https://github.com/wellingtoncunha/fresh_banana_classification"
