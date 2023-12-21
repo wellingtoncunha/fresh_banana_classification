@@ -161,3 +161,4 @@ cython_debug/
 data/train/train_freshbanana.zip
 data/train/train_rottenbanana.zip
 data/test/test_rottenbanana.zip
+data/test/test_freshbanana.zip

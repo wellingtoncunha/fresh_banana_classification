@@ -1,10 +1,10 @@
 authors:
   - family-names: Cunha
     given-names: Wellington
-  - family-names: Deginal
-    given-names: Chandrashekhar
-  - family-names: Dubey
-    given-names: Dhananjay Jagdish 
+  # - family-names: Deginal
+  #   given-names: Chandrashekhar
+  # - family-names: Dubey
+  #   given-names: Dhananjay Jagdish 
 cff-version: 1.2.0
 message: If you use this software, please cite it using these metadata.
 title: Fresh Banana Classification
