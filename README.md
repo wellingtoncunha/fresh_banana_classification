@@ -1,13 +1,5 @@
 # Fresh Banana Classification
 
-This repo contains the code produced for the term project of CS670 - Artificial Intelligence - Fall 2023 course from Department of Computer Science of Ying Wu College of Computing at New Jersey Institute of Technology.
-
-The project team is composed by:
-
-* Wellington Cunha (wc44@njit.edu)
-* Chandrashekhar Deginal (cd459@njit.edu)
-* Dhananjay Jagdish Dubey (dd573@njit.edu)
-
 ## Project proposal
 
 The project consisted in selecting a dataset and then a problem that could be solved with that dataset. As the dataset, we decided to work with [Fresh and Rotten Classification](https://www.kaggle.com/datasets/swoyam2609/fresh-and-stale-classification) from Kaggle and the problem of classifying fruits and vegetables freshness.
@@ -18,7 +10,7 @@ We understand that deep learning models can achieve good performance even for mu
 
 Another potential gap that we found on those works was in relation to the splitting of sets for validation: only one of them has reserved a true validation set (a set that will be touched only once, at the end of the training and test phase).
 
-So, the hypothesis we want to test in this project is if we can get a good accuracy (>95% on the test set) for the classification of freshness for one type of fruit or vegetable (we, somehow arbitrarily, elected banana as the type) and how well that would be generalized on a validation set.
+So, the hypothesis we want to test in this project is if we can get a good accuracy (>95% on the test set) for the classification of freshness for one type of fruit or vegetable and how well that would be generalized on a validation set.
 
 ## Codebase
 
@@ -32,10 +24,9 @@ We have been using Google colab to run the scripts below and the dataset, after 
 * **[02_data_standardization.ipynb](02_data_standardization.ipynb)**: this notebook contains the pre-training process of padding (with black pixels to keep aspect ratio) and resizing (to 512x512) the train and test images. The images were then pre-processed and saved into another folder in Google Drive using a pattern for their name and in png format.
 * **[03_data_augmentation.ipynb](03_data_augmentation.ipynb)**: in this notebook we explored data augmentation, first using OpenCV to rotate (up to i0 degrees) and flip (vertically and horizontally) and next using PyTorch to do that. The whole idead is to double the number of images for development and training/testing phase by using Data Augmentation.
 * **[04_augmented_images_statistics.ipynb](04_augmented_images_statistics.ipynb)**: in this notebook we get some statistics (mean and std) of images after transformation and augmentation. We don't capture min and max values of each channel because we learned, during exploration, that EVERY picture will contain at least one white (0, 0, 0) and one black (255, 255, 255) pixels, so, the min value of each RGB channel will always be 0, while the max value will always be 255.
+* **[05_simple_nn_model_training.ipynb](05_simple_nn_model_training.ipynb)**: we use this notebool to explore/experiment on building a simple Neural Network using SoftMax, including the steps required to set initial parameters and train and validate the accuracy of the model. 
+* **[06_transfer_learning_model_training.ipynb](06_transfer_learning_model_training.ipynb)**: in this notebook we have a full script with the architecture and hyperparameters that yielded the best results (ResNet18 - 100% of accuracy!).
+* **[07_validating_model.ipynb](07_validating_model.ipynb)**: this notebook contains the validation using the validation dataset we have reserved at the very beginning of this experiment. Again we could achieve 100% of accuracy.
+* **[08_checking_with_real_world_images.ipynb](08_checking_with_real_world_images.ipynb)**: we took some photos of bananas using a mobile device, place them on [photos](photos) folder and then used the model to predict. All the codes are available in this notebook.
 
-* **[04_model_training.ipynb](04_model_training.ipynb)**: we use this notebook to explore/experiment on building a simple Neural Network using SoftMax, including the steps required to set initial parameters and train and validate the accuracy of the model. We also start exploring Transfer Learning, all of that using [PyTorch](https://pytorch.org/).
-* **[05_transfer_learning.ipynb](05_transfer_learning.ipynb)**: in this notebook we have full script with the architecture and hyperparameters that yielded the best results (ResNet18 - 100% of accuracy!).
-* **[06_validating_model.ipynb](06_validating_model.ipynb)**: this notebook contains the validation using the validation dataset we have reserved at the very beginning of this experiment. Again we could achieve 100% of accuracy.
-
-The folder [saved_model](saved_model) contains the saved model that was trained on the notebook [05_transfer_learning.ipynb](05_transfer_learning.ipynb).
-
+The folder [saved_model](saved_model) contains the saved model that was trained on the notebook
